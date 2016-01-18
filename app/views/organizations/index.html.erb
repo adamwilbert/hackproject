@@ -1,22 +1,66 @@
-<div class="site-wrapper">
+<div class="site-wrapper-inner">
 
-    <div class="site-wrapper-inner">
+  <section class="section1">
 
-          <div class="background-video">
-            <video autoplay loop>
-              <source src="https://a0.muscache.com/airbnb/static/London-P1-1.mp4" type="video/mp4">
-              <source src="https://a0.muscache.com/airbnb/static/London-P1-0.webm" type="video/webm">
-            </video>
-          </div>
+      <div class="inner cover">
+
+        <div class="main-title">
+          <h1 class="cover-heading">Welcome</h1>
+          <p class="lead"></p>
+        </div>
+
+        <%= form_tag("/organizations/search/:q", method: "get") do %>
+         <%= label_tag(:q, "Search for:") %>
+         <%= text_field_tag(:q, 'Zipcode') %>
+         <%= submit_tag("Search") %>
+        <% end %>
+      </div>
+
+  </section>
+
+  <section class="section2">
+    <div class="container-two">
+
+      <div class="title">
+        <h3>Browse Topics</h3>
+      </div>
+
+    <div class="row">
+      <div class="container-section2">
+          <a href="/Organizations/Categories/Tutoring" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/9RkcEBs.jpg"> </a>
+          <a href="/Organizations/Categories/Sports" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/81Fw8oN.jpg"> </a>
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/ehuWnaA.jpg"> </a>
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/ARWFd1K.jpg"> </a>
+      </div>
+    </div>
 
 
-          <div class="inner">
-              <h1 class="cover-heading">After-School</h1>
-              <p class="lead">Where kids can enjoy life.</p>
-          </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section3">
+    <div class="container-three">
+
+      <div class="title">
+        <h3>What's New</h3>
+      </div>
+
+    <div class="row">
+      <div class="container-section3">
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/2BMDnds.jpg"> </a>
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/u6SKVG8.jpg"> </a>
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/hBphbDT.jpg"> </a>
+          <a href="#" class="section2-pictures pull-left col-xs-3 center-block"> <img src="http://i.imgur.com/yZGDNNO.jpg"> </a>
+      </div>
 
     </div>
 
+
+    </div>
+  </section>
+
+
 </div>
-
-
