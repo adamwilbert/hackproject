@@ -1,1 +1,20 @@
-search.html.erb
+<% arr = @organizations.sort_by{|s| s.distance_to('90031')} %>
+
+<% arr.each do |organization| %>
+
+<div class="container">
+    <div class='row'>
+        <div class='col-md-4' ><%=image_tag organization.profile_image %></div>
+        <div class="col-md-8"> <%= organization.name %></div>
+        <div class="col-md-4"> <%= organization.description %></div>
+        <div class="col-md-4"> <%= organization.address %></div>
+        <div class="col-md-4"> <%= organization.phone %></div>
+        <div class="col-md-4"> <%= organization.zip %></div>
+        <div class="col-md-4"> <%= organization.website %></div>
+    </div>
+</div>
+
+
+
+
+<% end %>

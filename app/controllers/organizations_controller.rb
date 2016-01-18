@@ -10,4 +10,7 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
   end
 
+  def search
+    @organizations = Organization.all
+  end
 end
