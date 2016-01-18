@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'organizations#index'
   get 'organizations/search' => 'organizations#search', as: :search
+  get 'organizations/category/:category' => 'organizations#category', as: :category
   resources :organizations
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

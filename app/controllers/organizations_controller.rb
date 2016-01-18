@@ -13,4 +13,8 @@ class OrganizationsController < ApplicationController
   def search
     @organizations = Organization.all
   end
+
+  def category
+    @organizations = Organization.all
+  end
 end
