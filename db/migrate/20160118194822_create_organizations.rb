@@ -9,6 +9,8 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :phone
       t.string :zip
       t.string :website
+      t.float :lat
+      t.float :lng
 
       t.timestamps null: false
     end
