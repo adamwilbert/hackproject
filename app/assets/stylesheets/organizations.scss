@@ -1,3 +1,17 @@
 // Place all the styles related to the Organizations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// INDEX HOME PAGE
+
+.inner {
+
+  text-align: center;
+  position: relative;
+}
+
+.background-video {
+  z-index: 1;
+  position: absolute;
+}
