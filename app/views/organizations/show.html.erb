@@ -1,15 +1,25 @@
+
 <div class="container">
     <div class='row'>
         <div class='col-md-4' ><%=image_tag @organization.profile_image %></div>
         <div class="col-md-8"> <%= @organization.name %></div>
-        <div class="col-md-8"> <%= @organization.description %></div>
-        <div class="col-md-8"> <%= @organization.address %></div>
-        <div class="col-md-8"> <%= @organization.phone %></div>
-        <div class="col-md-8"> <%= @organization.zip %></div>
-        <div class="col-md-8"> <%= @organization.website %></div>
+        <div class="col-md-4"> <%= @organization.description %></div>
+        <div class="col-md-4"> <%= @organization.address %></div>
+        <div class="col-md-4"> <%= @organization.phone %></div>
+        <div class="col-md-4"> <%= @organization.zip %></div>
+        <div class="col-md-4"> <%= @organization.website %></div>
     </div>
 </div>
 
 
+<%= link_to('Tutoring', category_path(:category => "Tutoring"), class: 'btn btn-group btn-primary') %>
+<%= link_to('Sports', category_path(:category => "Sports"), class: 'btn btn-group btn-primary') %>
 
-<%= @organizations.sort_by{|s| s.distance_to('90031')} %>
+
+
+
+<%= form_tag("/organizations/search/:q", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, 'Zipcode') %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -10,4 +10,15 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
   end
 
+  def search
+    @organizations = Organization.all
+    if params[:q]
+    @zip = params[:q]
+    redirect_to '/organizations/search/' + @zip
+  end
+  end
+
+  def category
+    @organizations = Organization.all
+  end
 end
