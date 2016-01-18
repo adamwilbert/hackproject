@@ -21,3 +21,8 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar {
+  z-index: 3 !important;
+}
