@@ -1,5 +1,4 @@
-<% arr = @organizations.sort_by{|s| s.distance_to('90031')} %>
-
+<% arr = @organizations.sort_by{|s| s.distance_to(params[:term])} %>
 <% arr.each do |organization| %>
 
 <div class="container">
